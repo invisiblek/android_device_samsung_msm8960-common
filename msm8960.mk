@@ -182,7 +182,8 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     macloader \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    wificond
 
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
