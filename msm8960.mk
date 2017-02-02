@@ -101,6 +101,10 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     tinymix
 
+# Bluetooth HAL
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
 # Camera Wrapper
 PRODUCT_PACKAGES += \
     camera.msm8960
