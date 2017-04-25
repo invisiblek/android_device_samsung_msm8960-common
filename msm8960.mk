@@ -108,7 +108,8 @@ PRODUCT_PACKAGES += \
 
 # Camera Wrapper
 PRODUCT_PACKAGES += \
-    camera.msm8960
+    camera.msm8960 \
+    libcamera_parameters_shim
 
 # Display
 PRODUCT_PACKAGES += \
