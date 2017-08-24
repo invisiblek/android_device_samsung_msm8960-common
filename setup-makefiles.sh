@@ -28,9 +28,9 @@ export D2_R530_LIST="d2cri d2csp d2usc"
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+LINEAGE_ROOT="$MY_DIR"/../../..
 
-HELPER="$CM_ROOT"/vendor/cm/build/tools/extract_utils.sh
+HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -38,7 +38,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper for common platform
-setup_vendor "$PLATFORM_COMMON" "$VENDOR" "$CM_ROOT" true
+setup_vendor "$PLATFORM_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and common guards for msm8960-common
 write_headers "$MSM8960_DEVICE_LIST"
@@ -51,7 +51,7 @@ write_footers
 
 if [ "$DEVICE_COMMON" == "d2-common" ]; then
 # Reinitialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards for d2-common
 write_headers "$D2_DEVICE_LIST"
@@ -76,10 +76,10 @@ fi
 
 if [ "$BLOB_LOC" != "$DEVICE" ]; then
 # Reinitialize the helper for device with commonized ril
-setup_vendor "$BLOB_LOC" "$VENDOR" "$CM_ROOT" true
+setup_vendor "$BLOB_LOC" "$VENDOR" "$LINEAGE_ROOT" true
 else
 # Reinitialize the helper for device without commonized ril
-setup_vendor "$BLOB_LOC" "$VENDOR" "$CM_ROOT"
+setup_vendor "$BLOB_LOC" "$VENDOR" "$LINEAGE_ROOT"
 fi
 
 # Copyright headers and guards
