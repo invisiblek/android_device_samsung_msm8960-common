@@ -58,7 +58,7 @@
     <bool name="config_supportSpeakerNearUltrasound">false</bool>
 
     <!-- Support in Surfaceflinger for blur layers.
-         NOTE: This requires additional hardware-specific code. -->
-    <bool name="config_uiBlurEnabled">true</bool>
+         NOTE: This requires additional hardware-specific code. >
+    <bool name="config_uiBlurEnabled">true</bool-->
 
 </resources>
